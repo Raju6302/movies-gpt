@@ -1,10 +1,14 @@
 import React from "react";
+import Body from "./components/Body.jsx";
+import { Provider } from "react-redux";
+import appStore from "./redux/appStore.js";
 
 const App = () => {
   return (
-    <p className="text-9xl font-bold text-red-500">Netflix GPT</p>
-  )
-}
+  <Provider store={appStore}>
+  <Body/>
+  </Provider>)
 
+};
 
 export default App;
