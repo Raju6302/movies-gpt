@@ -7,17 +7,15 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebaseConfig";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../redux/userSlice";
+import { BACKGROUND_IMG, USER_AVATAR } from "../utils/constant";
 
 const Login = () => {
   const dispatch = useDispatch();
   
   const [isSignIn, setIsSignIn] = useState(true);
   const [message, setMessage] = useState(null);
-
-  const navigate = useNavigate();
 
   const name = useRef();
   const email = useRef();
@@ -47,7 +45,7 @@ const Login = () => {
           console.log(user);
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/137879456?v=4",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
                const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -59,7 +57,6 @@ const Login = () => {
                           photoURL: photoURL,
                         })
                       );
-              navigate("/browse");
             })
             .catch((error) => {
               setMessage(error.message);
@@ -80,7 +77,6 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -96,7 +92,7 @@ const Login = () => {
         <Header />
         <img
           className="absolute"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/fc2c345e-5991-4917-be24-cd328b62cc3f/web_tall_panel/IN-en-20250414-TRIFECTA-perspective_0f1fb403-6efb-4223-8f10-cfd1a902f22c_large.jpg"
+          src={BACKGROUND_IMG}
           alt="backgroud"
         />
       </div>
