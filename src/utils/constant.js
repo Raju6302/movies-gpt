@@ -15,7 +15,8 @@ export const API_OPTIONS = {
   headers: {
     accept: "application/json",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmOTgwNDNhNTVmYTcxNzJkZTRjMzU5OWE1MjM1ZjM3NSIsIm5iZiI6MTc0NTM4MTgyMS41NTgsInN1YiI6IjY4MDg2OWJkYWMwMmQ0NDA3YmFiM2NjYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.CmCptjKuC4Lzx1cMIZRDlncTYw2OhaPmvwXmbPyFnCg",
+      //add your tmdb bearer here
+      "Bearer ",
   },
 };
 
