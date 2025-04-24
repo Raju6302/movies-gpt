@@ -1,6 +1,7 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 
+<<<<<<< HEAD
 const MovieList = ({ title, movies }) => {
   if (movies == null) return <h1>Loading...</h1>;
   return (
@@ -13,6 +14,16 @@ const MovieList = ({ title, movies }) => {
           ))}
         </div>
       </div>
+=======
+const MovieList = ( {title, movies} ) => {
+  console.log("data", movies);
+  return (
+    <div>
+      <h1>{title}</h1>
+      {movies.map((movie) => (
+        <MovieCard key={movie.id} poster={movie.poster_path} />
+      ))}
+>>>>>>> c639b6defb791e64e6c780fb422b81ff9f5f0d78
     </div>
   );
 };
