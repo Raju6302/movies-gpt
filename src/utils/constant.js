@@ -15,7 +15,7 @@ export const API_OPTIONS = {
   headers: {
     accept: "application/json",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmOTgwNDNhNTVmYTcxNzJkZTRjMzU5OWE1MjM1ZjM3NSIsIm5iZiI6MTc0NTM4MTgyMS41NTgsInN1YiI6IjY4MDg2OWJkYWMwMmQ0NDA3YmFiM2NjYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.CmCptjKuC4Lzx1cMIZRDlncTYw2OhaPmvwXmbPyFnCg",
+      "Bearer ",
   },
 };
 
@@ -23,3 +23,17 @@ export const TRAILER_START_URL = "https://api.themoviedb.org/3/movie/";
 export const TRAILER_END_URL = "/videos?language=en-US";
 
 export const TRAILER_KEY_URL = "https://www.youtube.com/embed/";
+
+export const MOVIE_CARD = "https://image.tmdb.org/t/p/w200/";
+
+export const MULTI_LANGUAGE = [
+  { identifier: "en", name: "English" },
+  { identifier: "hindi", name: "Hindi" },
+  { identifier: "telugu", name: "Telugu" },
+  { identifier: "spanish", name: "Spanish" },
+  { identifier: "kanada", name: "Kanada" },
+  { identifier: "tamil", name: "Tamil" },
+];
+
+
+export const OPENAI_KEY = ""

@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import { MOVIE_CARD } from "../utils/constant";
 
-const MovieCard = () => {
+const MovieCard = ({poster}) => {
   return (
-    <div>
-      {/* <img alt='movie card' src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg" /> */}
+    <div className="w-48 pr-4">
+      <img
+        className="cursor-pointer"
+        alt="movie card"
+        src={MOVIE_CARD + poster}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default MovieCard
+export default MovieCard;
